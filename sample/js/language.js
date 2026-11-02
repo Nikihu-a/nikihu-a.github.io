@@ -53,7 +53,20 @@
     document.title = copy.title;
     document.querySelector('meta[name="description"]').content = copy.description;
     document.querySelectorAll('[data-i18n]').forEach(element => {
-      element.textContent = copy[element.dataset.i18n];
+      const text = copy[element.dataset.i18n];
+      if (['intro', 'bio'].includes(element.dataset.i18n)) {
+        element.replaceChildren(...text.split(/(Pagepeek)/g).map(part => {
+          if (part !== 'Pagepeek') return document.createTextNode(part);
+          const link = document.createElement('a');
+          link.textContent = part;
+          link.href = 'https://pagepeek.ai/';
+          link.className = 'company-link';
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.setAttribute('aria-label', language === 'zh' ? 'Pagepeek 官网（在新标签页打开）' : 'Pagepeek official website (opens in a new tab)');
+          return link;
+        }));
+      } else element.textContent = text;
     });
     for (const attribute of ['alt', 'aria']) {
       document.querySelectorAll(`[data-i18n-${attribute}]`).forEach(element => {

@@ -50,7 +50,7 @@ sample/
 - 姓名：Niki Hu。
 - 来自上海。
 - 毕业于伦敦艺术大学（University of the Arts London，UAL）。
-- 曾在伦敦 Pagepeek 担任 AI 产品经理，并从事运营工作。
+- 曾在伦敦 [Pagepeek](https://pagepeek.ai/) 担任 AI 产品经理，并从事运营工作。
 
 以上来自用户在本次对话中的说明。不要擅自添加具体学位、任职日期、项目成果或当前所在地。
 
@@ -97,3 +97,6 @@ python3 tools/optimize-portfolio-assets.py /path/to/source /tmp/portfolio-render
 - `#/sound-of-april`：声音采样、频段分析、节点网络与粒子视觉输出；素材来自 `4(ual page5).pdf`。
 - `#/ashes`：补充粒子成品、节点过程与交互方案，保留原有手动播放的装置演示视频。
 - Sound of April 的 PDF 内含历史 YouTube 链接，本次验证未取得可用视频，因此网站使用本地作品图，不嵌入该链接。
+
+
+Pagepeek 官网：https://pagepeek.ai/ 。首页介绍、关于与经历区的公司名称，以及 Pagepeek 作品详情的官网入口均可点击访问。

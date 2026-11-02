@@ -53,6 +53,13 @@
     const title = el('h2', '', copy.title);
     title.id = 'project-title';
     heading.append(el('p', 'work-category', copy.category), title, el('p', 'project-description', copy.description));
+    if (project.website) {
+      const link = el('a', 'project-website', copy.websiteLabel + ' ↗');
+      link.href = project.website;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      heading.append(link);
+    }
     const facts = el('dl', 'project-facts');
     copy.facts.forEach(([label, value]) => {
       const fact = el('div');

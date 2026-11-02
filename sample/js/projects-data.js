@@ -47,7 +47,8 @@ window.portfolioProjects = [
         "PDF 阅读功能宣传素材",
         "Pagepeek 线下活动记录"
       ],
-      "coverAlt": "Pagepeek 的 AI 办公、PPT 和知识库宣传图"
+      "coverAlt": "Pagepeek 的 AI 办公、PPT 和知识库宣传图",
+      "websiteLabel": "Pagepeek 官网"
     },
     "en": {
       "title": "Pagepeek",
@@ -82,8 +83,10 @@ window.portfolioProjects = [
         "PDF reading feature asset",
         "Pagepeek event documentation"
       ],
-      "coverAlt": "Pagepeek campaign graphics for AI office, presentations and knowledge management"
-    }
+      "coverAlt": "Pagepeek campaign graphics for AI office, presentations and knowledge management",
+      "websiteLabel": "Pagepeek official website"
+    },
+    "website": "https://pagepeek.ai/"
   },
   {
     "id": "sound-of-april",
