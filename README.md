@@ -101,3 +101,5 @@ python3 tools/optimize-portfolio-assets.py /path/to/source /tmp/portfolio-render
 Pagepeek 官网：https://pagepeek.ai/ 。首页介绍、关于与经历区的公司名称，以及 Pagepeek 作品详情的官网入口均可点击访问。
 
 作品呈现约束：音频粒子案例只展示技术内容，使用新的技术名称与链接；原稿中的名称、背景文字和含名称的整页图片不用于网站展示。配图仅提取原 PDF 的音频分析、节点、波形和粒子输出区域。
+
+Pagepeek 卡片与详情封面使用官网首页截图 `pagepeek-home.webp`（来源 https://pagepeek.ai/，2026-11-02），替代原三张海报拼图。首页封面与「访问 Pagepeek 官网」可直接打开官网，标题仍进入工作案例详情。图库保留历史工作素材，封面截图不用于暗示当前官网由本人设计。

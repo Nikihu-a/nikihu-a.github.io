@@ -2,9 +2,7 @@ window.portfolioProjects = [
   {
     "id": "pagepeek",
     "cover": [
-      "pagepeek-07.webp",
-      "pagepeek-04.webp",
-      "pagepeek-08.webp"
+      "pagepeek-home.webp"
     ],
     "gallery": [
       "pagepeek-01.webp",
@@ -47,8 +45,8 @@ window.portfolioProjects = [
         "PDF 阅读功能宣传素材",
         "Pagepeek 线下活动记录"
       ],
-      "coverAlt": "Pagepeek 的 AI 办公、PPT 和知识库宣传图",
-      "websiteLabel": "Pagepeek 官网"
+      "coverAlt": "Pagepeek 官网首页，展示 AI Academic OS 与研究工作流",
+      "websiteLabel": "访问 Pagepeek 官网"
     },
     "en": {
       "title": "Pagepeek",
@@ -83,8 +81,8 @@ window.portfolioProjects = [
         "PDF reading feature asset",
         "Pagepeek event documentation"
       ],
-      "coverAlt": "Pagepeek campaign graphics for AI office, presentations and knowledge management",
-      "websiteLabel": "Pagepeek official website"
+      "coverAlt": "Pagepeek official homepage featuring AI Academic OS and its academic workflow",
+      "websiteLabel": "Visit Pagepeek website"
     },
     "website": "https://pagepeek.ai/"
   },

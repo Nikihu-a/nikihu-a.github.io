@@ -31,18 +31,42 @@
     grid.replaceChildren(...projects.map((project, i) => {
       const copy = project[language()];
       const isWide = i === 0 || (projects.length % 2 === 0 && i === projects.length - 1);
-      const card = el('a', 'work-card' + (isWide ? ' work-featured' : ''));
-      card.href = '#/' + project.id;
+      const card = el(project.website ? 'article' : 'a', 'work-card' + (isWide ? ' work-featured' : ''));
+      if (project.website) card.tabIndex = -1;
+      else card.href = '#/' + project.id;
       card.dataset.project = project.id;
       card.setAttribute('aria-label', copy.title + (language() === 'zh' ? '，查看作品详情' : ', view project'));
       const text = el('div', 'work-text');
       const row = el('div', 'work-title-row');
       const arrow = el('span', '', '↗');
       arrow.setAttribute('aria-hidden', 'true');
-      row.append(el('h3', '', copy.title), arrow);
+      const title = el('h3', '', copy.title);
+      if (project.website) {
+        const details = el('a');
+        details.href = '#/' + project.id;
+        details.append(title);
+        details.addEventListener('click', () => { fromCard = true; });
+        row.append(details, arrow);
+      } else row.append(title, arrow);
       text.append(el('p', 'work-category', copy.category), row, el('p', 'work-summary', copy.summary));
-      card.append(cover(project, 'work-cover'), text);
-      card.addEventListener('click', () => { fromCard = true; });
+      const visual = cover(project, 'work-cover');
+      if (project.website) {
+        const preview = el('a', 'work-preview');
+        preview.href = project.website;
+        preview.target = '_blank';
+        preview.rel = 'noopener noreferrer';
+        preview.setAttribute('aria-label', copy.websiteLabel);
+        preview.append(visual);
+        const website = el('a', 'work-website', copy.websiteLabel + ' ↗');
+        website.href = project.website;
+        website.target = '_blank';
+        website.rel = 'noopener noreferrer';
+        text.append(website);
+        card.append(preview, text);
+      } else {
+        card.append(visual, text);
+        card.addEventListener('click', () => { fromCard = true; });
+      }
       return card;
     }));
   }
