@@ -14,7 +14,7 @@ GitHub 仓库：https://github.com/Nikihu-a/nikihu-a.github.io
 
 线上版本通过 GitHub Pages 发布，推送到 `main` 后自动部署 `sample/` 中的网站。
 
-当前版本为浅色个人主页，包含完整照片、中英文切换、五组精选作品、页内介绍与 GitHub 联系入口。
+当前版本为浅色个人主页，包含完整照片、中英文切换、六组精选作品、页内介绍与 GitHub 联系入口。
 
 ## 文件结构
 
@@ -27,7 +27,7 @@ sample/
 │   └── portfolio.css      # 作品区与详情样式
 ├── js/
 │   ├── language.js        # 中英文文案与语言切换
-│   ├── projects-data.js   # 五组作品的中英文内容
+│   ├── projects-data.js   # 六组作品的中英文内容
 │   └── portfolio.js       # 作品卡片、详情与返回交互
 └── assets/
     ├── niki-london.jpg    # 用户提供的伦敦照片
@@ -40,7 +40,7 @@ sample/
 - 照片采用 1px 细灰边框和 10px 白色内衬。
 - “关于我”和“保持联系”采用页内锚点导航。
 - 右上角“中 / EN”切换全页语言；默认中文，通过浏览器本地存储记住选择。
-- 五组精选作品，点击打开页内详情，支持 Escape、关闭按钮与浏览器返回；可直接分享 `#/项目编号` 链接。
+- 六组精选作品，点击打开页内详情，支持 Escape、关闭按钮与浏览器返回；可直接分享 `#/项目编号` 链接。
 - 原图转成 WebP 并按需加载；演示视频由用户点击播放。
 - 手机适配及减少动态效果的系统偏好支持。
 - 首页中的个人照片：电脑在名字右侧，手机在介绍下方，保留原色与完整构图。
@@ -58,11 +58,11 @@ sample/
 
 页面结构与 CSS 位于 `sample/index.html`，中英文文案与切换逻辑位于 `sample/js/language.js`。照片使用网站内的相对路径，不依赖桌面上的原始文件。
 
-联系方式使用用户已提供的 GitHub 账号 Nikihu-a。首批作品选取 Pagepeek、Lost Crab and Little Flower、Memories in the Ashes、Dream Printer、LINK；机器人项目保留团队贡献说明，不添加未经证实的成效数字。
+联系方式使用用户已提供的 GitHub 账号 Nikihu-a。首批作品选取 Pagepeek、Sound of April、Memories in the Ashes、Lost Crab and Little Flower、Dream Printer、LINK；机器人项目保留团队贡献说明，不添加未经证实的成效数字。
 
 ## 验证状态
 
-已进行基础 HTML 解析、页内锚点与照片路径检查，并查看桌面浏览器截图。已检查中英文切换、刷新后语言保存、页内导航及 375px 手机宽度；无横向溢出和脚本错误。五组作品已检查打开、Escape 关闭、关闭后焦点恢复、浏览器返回/前进、直接访问作品链接、详情内语言切换，以及演示视频元数据加载和默认暂停状态。发布流程通过 GitHub Actions 执行，发布后核对线上 HTML 与照片的 SHA-256。
+已进行基础 HTML 解析、页内锚点与照片路径检查，并查看桌面浏览器截图。已检查中英文切换、刷新后语言保存、页内导航及 375px 手机宽度；无横向溢出和脚本错误。六组作品已检查打开、Escape 关闭、关闭后焦点恢复、浏览器返回/前进、直接访问作品链接、详情内语言切换，以及演示视频元数据加载和默认暂停状态。发布流程通过 GitHub Actions 执行，发布后核对线上 HTML 与照片的 SHA-256。
 
 
 ## 更新线上网站
@@ -90,3 +90,10 @@ python3 tools/optimize-portfolio-assets.py /path/to/source /tmp/portfolio-render
 ```
 
 演示视频封面由原视频抽帧生成，位于 `sample/assets/works/ashes-poster.webp`。
+
+
+## TouchDesigner 作品
+
+- `#/sound-of-april`：声音采样、频段分析、节点网络与粒子视觉输出；素材来自 `4(ual page5).pdf`。
+- `#/ashes`：补充粒子成品、节点过程与交互方案，保留原有手动播放的装置演示视频。
+- Sound of April 的 PDF 内含历史 YouTube 链接，本次验证未取得可用视频，因此网站使用本地作品图，不嵌入该链接。

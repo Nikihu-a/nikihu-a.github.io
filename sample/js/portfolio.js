@@ -27,9 +27,11 @@
     return frame;
   }
   function renderCards() {
+    document.querySelector('.work-count').textContent = '01 — ' + String(projects.length).padStart(2, '0');
     grid.replaceChildren(...projects.map((project, i) => {
       const copy = project[language()];
-      const card = el('a', 'work-card' + (i === 0 ? ' work-featured' : ''));
+      const isWide = i === 0 || (projects.length % 2 === 0 && i === projects.length - 1);
+      const card = el('a', 'work-card' + (isWide ? ' work-featured' : ''));
       card.href = '#/' + project.id;
       card.dataset.project = project.id;
       card.setAttribute('aria-label', copy.title + (language() === 'zh' ? '，查看作品详情' : ', view project'));

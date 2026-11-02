@@ -86,6 +86,187 @@ window.portfolioProjects = [
     }
   },
   {
+    "id": "sound-of-april",
+    "cover": [
+      "april-cover.webp"
+    ],
+    "gallery": [
+      "april-sound-analysis.webp",
+      "april-touchdesigner.webp"
+    ],
+    "zh": {
+      "title": "Sound of April",
+      "category": "TouchDesigner · 声音可视化",
+      "summary": "把声音分解为频段，让个体与群体的声音成为可见的粒子运动。",
+      "description": "以 2022 年上海封控期间的声音与个体表达为创作背景，探索如何让声音以另一种形式被看见。项目用 TouchDesigner 分析音频，将不同频段映射到粒子的运动与速度。",
+      "facts": [
+        [
+          "时间",
+          "2022.05–2022.06"
+        ],
+        [
+          "工具",
+          "TouchDesigner"
+        ],
+        [
+          "项目形式",
+          "声音分析 · 粒子视觉实验"
+        ]
+      ],
+      "sections": [
+        [
+          "声音采样",
+          "鸟鸣、电脑声、玻璃碰撞与咳嗽声被用于声音实验，声谱图呈现不同声音的结构。"
+        ],
+        [
+          "从频段到运动",
+          "通过音频分析区分低、中、高频段。高频用于控制粒子运动，低频用于控制粒子速度，以不同的运动状态回应对个体声音与群体声音的感受。"
+        ],
+        [
+          "过程与输出",
+          "保留声音分析、TouchDesigner 节点网络及多组输出画面，展示声音如何经过参数映射成为视觉形态。"
+        ]
+      ],
+      "captions": [
+        "声音采样与声谱分析实验",
+        "TouchDesigner 节点网络、频段分析与粒子输出"
+      ],
+      "coverAlt": "Sound of April 的黑白声音可视化概念与粒子画面"
+    },
+    "en": {
+      "title": "Sound of April",
+      "category": "TouchDesigner · AUDIO VISUALIZATION",
+      "summary": "Making individual and collective voices visible through audio-driven particles.",
+      "description": "Beginning with voices and individual expression during Shanghai’s 2022 lockdown, the project explores how sound can be seen in another form. TouchDesigner analyzes the audio and maps frequency ranges to particle motion and speed.",
+      "facts": [
+        [
+          "Period",
+          "May–June 2022"
+        ],
+        [
+          "Tool",
+          "TouchDesigner"
+        ],
+        [
+          "Format",
+          "Audio analysis · Particle experiments"
+        ]
+      ],
+      "sections": [
+        [
+          "Sampling sound",
+          "Bird calls, computer sounds, glass collisions and coughing are used as material for sound experiments, with spectrograms revealing their different structures."
+        ],
+        [
+          "From frequencies to motion",
+          "Audio analysis separates low, mid and high frequencies. High frequencies drive particle motion, while low frequencies control speed, responding to the different qualities of individual and collective voices."
+        ],
+        [
+          "Process and output",
+          "Audio studies, TouchDesigner node networks and multiple visual outputs document how parameter mapping turns sound into moving forms."
+        ]
+      ],
+      "captions": [
+        "Sound samples and spectrogram experiments",
+        "TouchDesigner node networks, frequency analysis and particle outputs"
+      ],
+      "coverAlt": "Black-and-white concept and particle imagery from Sound of April"
+    }
+  },
+  {
+    "id": "ashes",
+    "cover": [
+      "ashes-particles.webp"
+    ],
+    "gallery": [
+      "ashes-nodes.webp",
+      "ashes-setup.webp",
+      "ashes-poster.webp"
+    ],
+    "video": "ashes-demo.mp4",
+    "poster": "ashes-poster.webp",
+    "zh": {
+      "title": "Memories in the Ashes",
+      "category": "TouchDesigner · 交互装置",
+      "summary": "以接近时燃起的粒子火焰，思考战争、和平与记忆。",
+      "description": "围绕战争与和平的边界展开的交互装置。参与者的距离成为视觉变化的输入：走近墙面时，投影中的粒子形成燃烧的火焰，将身体行动与作品中的记忆联系起来。",
+      "facts": [
+        [
+          "项目形式",
+          "传感交互与投影装置"
+        ],
+        [
+          "工具",
+          "TouchDesigner · Arduino"
+        ],
+        [
+          "交互方式",
+          "距离感应驱动粒子视觉变化"
+        ]
+      ],
+      "sections": [
+        [
+          "距离驱动交互",
+          "Arduino 读取距离数据，经串口传入 TouchDesigner。参与者接近墙面时，数据驱动粒子参数变化，触发燃烧的视觉效果。"
+        ],
+        [
+          "粒子与投影流程",
+          "以 Particle SOP 生成粒子，调整生命周期、速度、方向与颜色，再经 Render TOP 渲染并配置投影输出。节点截图呈现视觉系统的搭建过程。"
+        ],
+        [
+          "视觉与空间",
+          "粒子投影与墙面上的文字共同构成装置，将战争、和平与记忆的议题放进可感知的空间体验。"
+        ]
+      ],
+      "captions": [
+        "TouchDesigner 粒子节点、参数与投影输出",
+        "距离感应、Arduino 与投影装置的交互方案",
+        "装置现场视频截帧"
+      ],
+      "coverAlt": "Memories in the Ashes 的红色 TouchDesigner 粒子火焰成品"
+    },
+    "en": {
+      "title": "Memories in the Ashes",
+      "category": "TouchDesigner · INTERACTIVE INSTALLATION",
+      "summary": "Proximity-triggered particle flames reflect on war, peace and memory.",
+      "description": "An interactive installation exploring the boundary between war and peace. A visitor’s distance becomes a visual input: approaching the wall makes projected particles burn, connecting physical action with the memories in the installation.",
+      "facts": [
+        [
+          "Format",
+          "Sensor-driven projection installation"
+        ],
+        [
+          "Tools",
+          "TouchDesigner · Arduino"
+        ],
+        [
+          "Interaction",
+          "Distance input drives particle visuals"
+        ]
+      ],
+      "sections": [
+        [
+          "Distance-driven interaction",
+          "Arduino reads distance data and sends it to TouchDesigner over serial. As a visitor approaches the wall, the input changes particle parameters to trigger a burning visual effect."
+        ],
+        [
+          "Particles and projection",
+          "Particle SOP generates the particles; lifetime, speed, direction and color shape their behavior. Render TOP and projection output complete the pipeline, documented in the node screenshots."
+        ],
+        [
+          "Visuals and space",
+          "Projected particles and text on the wall bring war, peace and memory into a spatial, bodily experience."
+        ]
+      ],
+      "captions": [
+        "TouchDesigner particle nodes, parameters and projection output",
+        "Interaction concept linking distance sensing, Arduino and projection",
+        "A frame from the installation demonstration"
+      ],
+      "coverAlt": "The final red particle-flame visual created in TouchDesigner for Memories in the Ashes"
+    }
+  },
+  {
     "id": "lost-crab",
     "cover": [
       "robot-cover.webp"
@@ -163,85 +344,6 @@ window.portfolioProjects = [
         "Proximity sensing and the interaction scene"
       ],
       "coverAlt": "Cover of the collaborative Lost Crab and Little Flower robotics project"
-    }
-  },
-  {
-    "id": "ashes",
-    "cover": [
-      "ashes-cover.webp"
-    ],
-    "gallery": [
-      "ashes-poster.webp"
-    ],
-    "video": "ashes-demo.mp4",
-    "poster": "ashes-poster.webp",
-    "zh": {
-      "title": "Memories in the Ashes",
-      "category": "交互装置 · 创意编程",
-      "summary": "以接近时燃起的粒子火焰，思考战争、和平与记忆。",
-      "description": "围绕战争与和平的边界展开的交互装置。参与者的距离成为视觉变化的输入：走近墙面时，投影中的粒子形成燃烧的火焰，将身体行动与作品中的记忆联系起来。",
-      "facts": [
-        [
-          "项目形式",
-          "传感交互与投影装置"
-        ],
-        [
-          "工具",
-          "TouchDesigner · Arduino"
-        ],
-        [
-          "交互方式",
-          "距离感应驱动粒子视觉变化"
-        ]
-      ],
-      "sections": [
-        [
-          "交互逻辑",
-          "Arduino 读取距离信息，TouchDesigner 接收数据并调整粒子参数。作品将接近这一日常动作转化为触发火焰的条件。"
-        ],
-        [
-          "视觉与空间",
-          "粒子投影与墙面上的文字共同构成装置，将抽象的冲突议题放进可感知的空间体验。"
-        ]
-      ],
-      "captions": [
-        "装置现场视频截帧"
-      ],
-      "coverAlt": "Memories in the Ashes 的红色粒子火焰视觉"
-    },
-    "en": {
-      "title": "Memories in the Ashes",
-      "category": "INTERACTIVE INSTALLATION · CREATIVE CODING",
-      "summary": "Proximity-triggered particle flames reflect on war, peace and memory.",
-      "description": "An interactive installation exploring the boundary between war and peace. A visitor’s distance becomes a visual input: approaching the wall makes projected particles burn, connecting physical action with the memories in the installation.",
-      "facts": [
-        [
-          "Format",
-          "Sensor-driven projection installation"
-        ],
-        [
-          "Tools",
-          "TouchDesigner · Arduino"
-        ],
-        [
-          "Interaction",
-          "Distance input drives particle visuals"
-        ]
-      ],
-      "sections": [
-        [
-          "Interaction logic",
-          "Arduino reads distance data, while TouchDesigner receives it and updates particle parameters. The ordinary act of approaching becomes the trigger for the flames."
-        ],
-        [
-          "Visuals and space",
-          "Projected particles and text on the wall bring an abstract theme into a spatial, bodily experience."
-        ]
-      ],
-      "captions": [
-        "Installation process and documentation"
-      ],
-      "coverAlt": "Red particle flames from Memories in the Ashes"
     }
   },
   {

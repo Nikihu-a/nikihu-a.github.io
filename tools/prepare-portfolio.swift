@@ -10,7 +10,10 @@ let pages: [(String, Int, String)] = [
     ("1.pdf", 0, "link-cover"), ("1.pdf", 3, "link-world"), ("1.pdf", 4, "link-scenes"),
     ("2.pdf", 0, "dream-cover"), ("2.pdf", 2, "dream-process"),
     ("6.14/Q ROBOT.pdf", 0, "robot-cover"), ("6.14/Q ROBOT.pdf", 16, "robot-prototype"), ("6.14/Q ROBOT.pdf", 18, "robot-interaction"),
-    ("Memories in the ashes.pdf", 14, "ashes-cover")
+    ("Memories in the ashes.pdf", 14, "ashes-cover"),
+    ("Memories in the ashes.pdf", 18, "ashes-particles"),
+    ("Memories in the ashes.pdf", 13, "ashes-setup"), ("Memories in the ashes.pdf", 15, "ashes-nodes"),
+    ("4(ual page5).pdf", 0, "april-cover"), ("4(ual page5).pdf", 3, "april-sound-analysis"), ("4(ual page5).pdf", 4, "april-touchdesigner")
 ]
 for (file,index,name) in pages {
     guard let doc=PDFDocument(url:source.appendingPathComponent(file)),let page=doc.page(at:index) else {fatalError(file)}
