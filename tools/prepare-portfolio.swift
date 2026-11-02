@@ -8,8 +8,8 @@ let output = URL(fileURLWithPath: CommandLine.arguments[2])
 try FileManager.default.createDirectory(at: output, withIntermediateDirectories: true)
 let pages: [(String, Int, String)] = [
     ("1.pdf", 0, "link-cover"), ("1.pdf", 3, "link-world"), ("1.pdf", 4, "link-scenes"),
-    ("2.pdf", 0, "dream-cover"), ("2.pdf", 2, "dream-process"),
-    ("6.14/Q ROBOT.pdf", 0, "robot-cover"), ("6.14/Q ROBOT.pdf", 16, "robot-prototype"), ("6.14/Q ROBOT.pdf", 18, "robot-interaction"),
+    ("2.pdf", 2, "dream-process"),
+    ("6.14/Q ROBOT.pdf", 16, "robot-prototype"), ("6.14/Q ROBOT.pdf", 18, "robot-interaction"),
     ("Memories in the ashes.pdf", 14, "ashes-cover"),
     ("Memories in the ashes.pdf", 18, "ashes-particles"),
     ("Memories in the ashes.pdf", 13, "ashes-setup"), ("Memories in the ashes.pdf", 15, "ashes-nodes")

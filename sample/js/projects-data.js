@@ -273,7 +273,8 @@ window.portfolioProjects = [
   {
     "id": "lost-crab",
     "cover": [
-      "robot-cover.webp"
+      "robot-object.webp",
+      "robot-flower.webp"
     ],
     "gallery": [
       "robot-prototype.webp",
@@ -312,7 +313,7 @@ window.portfolioProjects = [
         "小机器人原型与按钮交互",
         "机器人接近感应与场景布局"
       ],
-      "coverAlt": "Lost Crab and Little Flower 团队机器人项目封面"
+      "coverAlt": "蟹形机器人与发光花朵原型实拍"
     },
     "en": {
       "title": "Lost Crab & Little Flower",
@@ -347,13 +348,14 @@ window.portfolioProjects = [
         "Small robot prototype and button interaction",
         "Proximity sensing and the interaction scene"
       ],
-      "coverAlt": "Cover of the collaborative Lost Crab and Little Flower robotics project"
-    }
+      "coverAlt": "Original photographs of the crab robot and illuminated flower prototype"
+    },
+    "coverStyle": "prototype-cover"
   },
   {
     "id": "dream-printer",
     "cover": [
-      "dream-cover.webp"
+      "dream-object.webp"
     ],
     "gallery": [
       "dream-process.webp"
@@ -425,7 +427,8 @@ window.portfolioProjects = [
         "Dream recording and printing interaction flow"
       ],
       "coverAlt": "Concept image of the Dream Printer bedside device"
-    }
+    },
+    "coverStyle": "product-cover"
   },
   {
     "id": "link",

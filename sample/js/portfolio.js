@@ -22,7 +22,7 @@
   }
   function cover(project, className, eager = false) {
     const copy = project[language()];
-    const frame = el('div', className + (project.cover.length > 1 ? ' campaign-cover' : ''));
+    const frame = el('div', className + (project.coverStyle ? ' ' + project.coverStyle : project.cover.length > 1 ? ' campaign-cover' : ''));
     project.cover.forEach((file, i) => frame.append(artwork(file, i === 0 ? copy.coverAlt : '', eager)));
     return frame;
   }

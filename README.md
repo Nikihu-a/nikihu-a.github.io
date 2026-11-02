@@ -103,3 +103,5 @@ Pagepeek 官网：https://pagepeek.ai/ 。首页介绍、关于与经历区的�
 作品呈现约束：音频粒子案例只展示技术内容，使用新的技术名称与链接；原稿中的名称、背景文字和含名称的整页图片不用于网站展示。配图仅提取原 PDF 的音频分析、节点、波形和粒子输出区域。
 
 Pagepeek 卡片与详情封面使用官网首页截图 `pagepeek-home.webp`（来源 https://pagepeek.ai/，2026-11-02），替代原三张海报拼图。首页封面与「访问 Pagepeek 官网」可直接打开官网，标题仍进入工作案例详情。图库保留历史工作素材，封面截图不用于暗示当前官网由本人设计。
+
+机器人与 Dream Printer 封面从 PDF 中直接提取原始实拍/渲染图，采用网页双图与产品场景构图，不再使用带标题、荧光线条和说明文字的整页演示稿。首页与详情共用新封面，团队署名与个人贡献仍保留在正文。素材可通过 `python3 tools/prepare-object-covers.py /path/to/source sample/assets/works` 重建（需要 PyMuPDF、Pillow），不改动源 PDF。
