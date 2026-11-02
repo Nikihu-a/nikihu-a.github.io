@@ -1,107 +1,65 @@
-# Niki Hu · 个人网站
+# Niki Hu · Personal Portfolio
 
-个人主页采用暖白底、深灰字和灰紫色点缀，首页大幅照片配有细灰边框和白色内衬。
+中英文个人作品集，连接 AI 产品与运营、创意机器人和交互设计实践。
+A bilingual portfolio of AI product work, creative robotics and interactive projects.
+
+[访问网站 / Live](https://nikihu-a.github.io/) · [精选作品 / Projects](https://nikihu-a.github.io/#work) · [GitHub 主页](https://github.com/Nikihu-a)
+
+![Niki Hu 个人网站首页实机预览](docs/preview.webp)
+
+## 项目概览
+
+- **访客**：希望了解 Niki 的经历、项目与合作方向的人。
+- **目标**：从一页介绍进入作品详情，清楚区分工作案例、团队原型与个人探索。
+- **内容与方向**：Niki 的个人经历、项目选择与展示方向；网站实现通过 AI 编程协作完成。
+- **设计取舍**：使用轻量静态页面、页内详情与中英文切换，作品图片本地托管，演示视频手动播放。
+
+## 精选案例
+
+| 项目 | 展示内容 |
+| :--- | :--- |
+| [Pagepeek](https://nikihu-a.github.io/#/pagepeek) | AI 产品与运营经历中的产品传播、社交内容与活动资料 |
+| [音频响应粒子实验](https://nikihu-a.github.io/#/audio-particles) | TouchDesigner 声音分析、频段映射、节点与粒子渲染 |
+| [Memories in the Ashes](https://nikihu-a.github.io/#/ashes) | TouchDesigner 与 Arduino 距离交互、粒子视觉及装置演示 |
+| [Lost Crab & Little Flower](https://nikihu-a.github.io/#/lost-crab) | 机器学习与 Arduino 团队机器人项目，正文注明个人贡献 |
+| [Dream Printer](https://nikihu-a.github.io/#/dream-printer) | 梦境记录、解释与打印输出的床边设备概念 |
+| [LINK](https://nikihu-a.github.io/#/link) | VR 社交与共同游玩的场景设计概念 |
 
 ## 本地查看
 
-在 Chrome 或 Safari 中直接打开 `sample/index.html`，无需安装依赖或构建。
+直接在浏览器打开 `sample/index.html`，无需安装依赖或构建。
+也可以使用本地服务器：
 
-修改文件并保存后，刷新浏览器即可查看；若内容没有更新，可按 `⌘ ⇧ R` 强制刷新。
+```sh
+python3 -m http.server 8000 --directory sample
+```
 
-线上地址：https://nikihu-a.github.io/
-
-GitHub 仓库：https://github.com/Nikihu-a/nikihu-a.github.io
-
-线上版本通过 GitHub Pages 发布，推送到 `main` 后自动部署 `sample/` 中的网站。
-
-当前版本为浅色个人主页，包含完整照片、中英文切换、六组精选作品、页内介绍与 GitHub 联系入口。
+打开 <http://localhost:8000>。修改后刷新；如显示旧内容，强制刷新浏览器。
 
 ## 文件结构
 
 ```text
-README.md
-.github/workflows/pages.yml # 自动发布流程
 sample/
-├── index.html             # 页面结构、样式与交互
-├── css/
-│   └── portfolio.css      # 作品区与详情样式
+├── index.html             # 首页、关于与联系区
+├── css/portfolio.css      # 作品区和详情样式
 ├── js/
 │   ├── language.js        # 中英文文案与语言切换
-│   ├── projects-data.js   # 六组作品的中英文内容
-│   └── portfolio.js       # 作品卡片、详情与返回交互
-└── assets/
-    ├── niki-london.jpg    # 用户提供的伦敦照片
-    └── works/             # 网页图片与手动播放的演示视频
+│   ├── projects-data.js   # 作品数据
+│   └── portfolio.js       # 卡片、详情与返回交互
+└── assets/                # 照片、作品图片与演示视频
+docs/                      # 项目预览与维护说明
+tools/                     # 离线素材提取与压缩
+.github/workflows/         # GitHub Pages 发布
 ```
 
-## 已实现
+## 功能与验证
 
-- 浅色首页、用户提供的完整伦敦照片与衬线标题。
-- 照片采用 1px 细灰边框和 10px 白色内衬。
-- “关于我”和“保持联系”采用页内锚点导航。
-- 右上角“中 / EN”切换全页语言；默认中文，通过浏览器本地存储记住选择。
-- 六组精选作品，点击打开页内详情，支持 Escape、关闭按钮与浏览器返回；可直接分享 `#/项目编号` 链接。
-- 原图转成 WebP 并按需加载；演示视频由用户点击播放。
-- 手机适配及减少动态效果的系统偏好支持。
-- 首页中的个人照片：电脑在名字右侧，手机在介绍下方，保留原色与完整构图。
+中英文切换会记住语言选择；作品支持直接分享链接、Escape 关闭、焦点恢复及浏览器返回。页面适配手机，支持系统减少动态效果偏好。
 
-## 已确认的个人信息
+已检查桌面与 375px 手机宽度、六组作品详情、中英文切换、图片路径与视频默认暂停。GitHub Actions 负责发布，线上文件与本地版本按哈希核对。
 
-- 姓名：Niki Hu。
-- 来自上海。
-- 毕业于伦敦艺术大学（University of the Arts London，UAL）。
-- 曾在伦敦 [Pagepeek](https://pagepeek.ai/) 担任 AI 产品经理，并从事运营工作。
+## 发布与维护
 
-以上来自用户在本次对话中的说明。不要擅自添加具体学位、任职日期、项目成果或当前所在地。
+推送 `main` 后，GitHub Actions 自动将 `sample/` 发布到 GitHub Pages，无需 `dist` 或打包步骤。
 
-## 内容维护
-
-页面结构与 CSS 位于 `sample/index.html`，中英文文案与切换逻辑位于 `sample/js/language.js`。照片使用网站内的相对路径，不依赖桌面上的原始文件。
-
-联系方式使用用户已提供的 GitHub 账号 Nikihu-a。首批作品选取 Pagepeek、音频响应粒子实验、Memories in the Ashes、Lost Crab and Little Flower、Dream Printer、LINK；机器人项目保留团队贡献说明，不添加未经证实的成效数字。
-
-## 验证状态
-
-已进行基础 HTML 解析、页内锚点与照片路径检查，并查看桌面浏览器截图。已检查中英文切换、刷新后语言保存、页内导航及 375px 手机宽度；无横向溢出和脚本错误。六组作品已检查打开、Escape 关闭、关闭后焦点恢复、浏览器返回/前进、直接访问作品链接、详情内语言切换，以及演示视频元数据加载和默认暂停状态。发布流程通过 GitHub Actions 执行，发布后核对线上 HTML 与照片的 SHA-256。
-
-
-## 更新线上网站
-
-修改并保存文件后，在项目目录的终端运行：
-
-```sh
-git add sample README.md
-git commit -m "Update personal website"
-git push
-```
-
-在仓库的 Actions 页面查看发布进度。首次使用新终端时可运行 `gh --version` 检查 GitHub CLI。
-
-
-## 作品素材维护
-
-作品文案位于 `sample/js/projects-data.js`，包含中文与英文。更新脚本、样式时同步修改 `index.html` 对应的 `?v=` 版本号。
-
-原始作品文件不移动、不上传整份 PDF 或 Keynote；本地整理资料在 `资料整理/`，已加入忽略列表。可用以下脚本重新生成网页素材（需要 macOS 的 Swift、PDFKit、AVFoundation，以及 Python Pillow）：
-
-```sh
-swift tools/prepare-portfolio.swift /path/to/source /tmp/portfolio-rendered
-python3 tools/optimize-portfolio-assets.py /path/to/source /tmp/portfolio-rendered sample/assets/works
-```
-
-演示视频封面由原视频抽帧生成，位于 `sample/assets/works/ashes-poster.webp`。
-
-
-## TouchDesigner 作品
-
-- `#/audio-particles`：声音采样、频段分析、节点网络与粒子视觉输出；素材来自 `4(ual page5).pdf`。
-- `#/ashes`：补充粒子成品、节点过程与交互方案，保留原有手动播放的装置演示视频。
-
-
-Pagepeek 官网：https://pagepeek.ai/ 。首页介绍、关于与经历区的公司名称，以及 Pagepeek 作品详情的官网入口均可点击访问。
-
-作品呈现约束：音频粒子案例只展示技术内容，使用新的技术名称与链接；原稿中的名称、背景文字和含名称的整页图片不用于网站展示。配图仅提取原 PDF 的音频分析、节点、波形和粒子输出区域。
-
-Pagepeek 卡片与详情封面使用官网首页截图 `pagepeek-home.webp`（来源 https://pagepeek.ai/，2026-11-02），替代原三张海报拼图。首页封面与「访问 Pagepeek 官网」可直接打开官网，标题仍进入工作案例详情。图库保留历史工作素材，封面截图不用于暗示当前官网由本人设计。
-
-机器人与 Dream Printer 封面从 PDF 中直接提取原始实拍/渲染图，采用网页双图与产品场景构图，不再使用带标题、荧光线条和说明文字的整页演示稿。首页与详情共用新封面，团队署名与个人贡献仍保留在正文。素材可通过 `python3 tools/prepare-object-covers.py /path/to/source sample/assets/works` 重建（需要 PyMuPDF、Pillow），不改动源 PDF。
+作品更新、素材重建、缓存版本与署名规则见 [维护说明](docs/maintenance.md)。
