@@ -1,0 +1,5 @@
+.DS_Store
+promo/
+node_modules/
+.env
+.env.*
