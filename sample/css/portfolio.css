@@ -1,0 +1,59 @@
+.works{padding:54px 0 84px;border-top:1px solid var(--line)}
+.works-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:36px}
+.works-heading .section-label{margin-bottom:16px}
+.works-heading h2{font:400 clamp(36px,4vw,56px)/1.2 var(--serif);letter-spacing:-.035em;margin:0}
+.work-count{font-size:12px;color:var(--muted);padding-bottom:7px}
+.work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 30px}
+.work-card{display:block;min-width:0}
+.work-card:focus-visible{outline-offset:8px}
+.work-cover{background:#e9e5df;aspect-ratio:1.65;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.work-cover>img{display:block;width:100%;height:100%;object-fit:contain}
+.campaign-cover{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:24px;background:#141117}
+.campaign-cover>img{width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+.work-text{padding-top:20px}
+.work-category{font-size:10px;letter-spacing:.06em;color:var(--accent);margin:0 0 12px;line-height:1.5}
+.work-title-row{display:flex;justify-content:space-between;align-items:start;gap:20px}
+.work-title-row h3{font:400 clamp(23px,2.7vw,35px)/1.2 var(--serif);letter-spacing:-.025em;margin:0}
+.work-title-row>span{font-size:22px;font-weight:400}
+.work-card:hover h3{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+.work-summary{font-size:13px;line-height:1.8;color:var(--muted);margin:13px 0 0;max-width:560px}
+.work-featured{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;align-items:center;background:#eee9ee}
+.work-featured .work-cover{aspect-ratio:1.6}
+.work-featured .work-text{padding:30px 36px}
+.work-featured h3{font-size:48px}
+.work-featured .work-summary{font-size:14px}
+.work-dialog{width:min(1100px,94vw);max-width:none;max-height:90svh;padding:0;border:1px solid var(--line);background:var(--paper);color:var(--ink);overscroll-behavior:contain}
+.work-dialog::backdrop{background:#211c196b;backdrop-filter:blur(6px)}
+.work-dialog-header{position:sticky;top:0;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--paper);border-bottom:1px solid var(--line);padding:15px 30px}
+.work-dialog-label{font-size:10px;letter-spacing:.12em;color:var(--muted)}
+.work-dialog-tools{display:flex;align-items:center;gap:20px}
+.work-dialog .language-switch{border:0;padding:0}
+.work-close{width:38px;height:38px;border:1px solid var(--line);background:transparent;border-radius:50%;font-size:24px;line-height:1;cursor:pointer}
+.project-content{padding:40px}
+.project-heading{padding:10px 0 30px}
+.project-heading h2{font:400 clamp(32px,5vw,64px)/1.1 var(--serif);letter-spacing:-.035em;margin:0 0 23px;overflow-wrap:anywhere}
+.project-description{font-size:15px;line-height:1.9;color:var(--muted);max-width:760px;margin:0}
+.project-hero{margin:0 0 32px}
+.project-hero img{display:block;width:100%;height:auto;max-height:650px;object-fit:contain;background:#e9e5df}
+.project-hero.campaign-cover{padding:30px;min-height:250px}
+.project-hero.campaign-cover img{width:100%;max-height:none;aspect-ratio:1;object-fit:contain}
+.project-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 32px;margin:0 0 35px;border-block:1px solid var(--line);padding:24px 0}
+.project-facts>div{min-width:0}
+.project-facts dt{font-size:10px;color:var(--accent);margin-bottom:9px;line-height:1.5}
+.project-facts dd{margin:0;font-size:13px;line-height:1.8;overflow-wrap:anywhere}
+.project-section{margin:28px 0}
+.project-section h3{font-size:15px;font-weight:500;margin:0 0 12px}
+.project-section p{font-size:14px;line-height:1.9;color:var(--muted);max-width:780px;margin:0}
+.project-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:32px;align-items:start}
+.project-gallery figure{margin:0;min-width:0}
+.project-gallery img{width:100%;height:auto;display:block;background:#e9e5df}
+.project-gallery figcaption{font-size:11px;line-height:1.7;color:var(--muted);margin-top:10px}
+.project-gallery:not(.campaign-gallery)>figure:last-child:nth-child(odd){grid-column:1/-1}
+.project-video{margin:35px 0 0}
+.project-video video{display:block;width:100%;max-height:570px;background:#171717}
+.project-video figcaption{font-size:11px;line-height:1.7;color:var(--muted);margin-top:12px}
+@media(max-width:1000px){.nav{gap:22px}.edition{display:none}.work-featured .work-text{padding:26px}.work-featured h3{font-size:38px}}
+@media(max-width:700px){
+  .works{padding:36px 0 48px}.works-heading{margin-bottom:26px}.works-heading .section-label{font-size:9px;margin-bottom:12px}.works-heading h2{font-size:37px}.work-count{font-size:10px}.work-grid{grid-template-columns:1fr;gap:30px}.work-featured{display:block}.work-featured .work-text{padding:24px}.work-featured h3{font-size:33px}.work-featured .work-summary{font-size:12px}.campaign-cover{padding:15px;gap:7px}.work-featured .work-cover{aspect-ratio:1.65}.work-text{padding-top:16px}.work-title-row h3{font-size:27px}.work-summary{font-size:12px;margin-top:11px}.work-category{font-size:9px;margin-bottom:9px}.work-dialog{width:100%;height:100svh;max-height:100svh;margin:0;border:0}.work-dialog-header{padding:12px 20px}.work-dialog-label{font-size:9px}.work-dialog-tools{gap:15px}.work-close{width:34px;height:34px;font-size:22px}.project-content{padding:26px 22px 36px}.project-heading{padding-top:5px}.project-heading h2{font-size:36px;margin-bottom:19px}.project-description{font-size:13px}.project-facts{grid-template-columns:1fr;gap:18px;padding-block:22px}.project-facts dd{font-size:12px}.project-section h3{font-size:14px}.project-section p{font-size:13px}.project-gallery{gap:20px;grid-template-columns:1fr}.project-gallery figure{grid-column:auto!important}.project-hero.campaign-cover{padding:13px;min-height:0}.project-gallery figcaption{font-size:10px}.project-video figcaption{font-size:10px}.nav{gap:13px}html[lang="en"] .nav{gap:11px}.nav .nav-contact{gap:0}.nav a{font-size:10px}.language-switch{padding-left:9px}
+}
+@media(max-width:360px){.nav{gap:10px}html[lang="en"] .nav{gap:9px}.nav a{font-size:9px}.language-switch{padding-left:7px}}
