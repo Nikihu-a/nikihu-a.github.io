@@ -89,91 +89,94 @@ window.portfolioProjects = [
     "website": "https://pagepeek.ai/"
   },
   {
-    "id": "sound-of-april",
+    "id": "audio-particles",
     "cover": [
-      "april-cover.webp"
+      "audio-spectrum.webp"
     ],
     "gallery": [
-      "april-sound-analysis.webp",
-      "april-touchdesigner.webp"
+      "audio-nodes.webp",
+      "audio-waveforms.webp",
+      "audio-particles.webp"
     ],
     "zh": {
-      "title": "Sound of April",
-      "category": "TouchDesigner · 声音可视化",
-      "summary": "把声音分解为频段，让个体与群体的声音成为可见的粒子运动。",
-      "description": "以 2022 年上海封控期间的声音与个体表达为创作背景，探索如何让声音以另一种形式被看见。项目用 TouchDesigner 分析音频，将不同频段映射到粒子的运动与速度。",
+      "title": "音频响应粒子实验",
+      "category": "TouchDesigner · 音频分析与粒子渲染",
+      "summary": "拆分声音频段，将音频参数映射为粒子运动与速度。",
+      "description": "使用 TouchDesigner 分析声音输入，区分低、中、高频段，并把音频参数关联到粒子运动与速度。配图展示声谱分析、节点搭建、参数变化和粒子渲染结果。",
       "facts": [
-        [
-          "时间",
-          "2022.05–2022.06"
-        ],
         [
           "工具",
           "TouchDesigner"
         ],
         [
-          "项目形式",
-          "声音分析 · 粒子视觉实验"
+          "输入",
+          "音频样本与频段参数"
+        ],
+        [
+          "输出",
+          "音频响应的粒子视觉"
         ]
       ],
       "sections": [
         [
-          "声音采样",
-          "鸟鸣、电脑声、玻璃碰撞与咳嗽声被用于声音实验，声谱图呈现不同声音的结构。"
+          "声音分析",
+          "对鸟鸣、电脑声、玻璃碰撞和咳嗽等音频样本进行分析，比较声谱结构与不同频段的变化。"
         ],
         [
-          "从频段到运动",
-          "通过音频分析区分低、中、高频段。高频用于控制粒子运动，低频用于控制粒子速度，以不同的运动状态回应对个体声音与群体声音的感受。"
+          "参数映射",
+          "高频用于控制粒子运动，低频用于控制粒子速度。通过连续变化的音频参数建立声音与视觉之间的对应关系。"
         ],
         [
-          "过程与输出",
-          "保留声音分析、TouchDesigner 节点网络及多组输出画面，展示声音如何经过参数映射成为视觉形态。"
+          "节点与渲染",
+          "将音频分析、参数控制和粒子渲染组织为节点流程，结合波形、节点截图与多组粒子输出记录调试过程。"
         ]
       ],
       "captions": [
-        "声音采样与声谱分析实验",
-        "TouchDesigner 节点网络、频段分析与粒子输出"
+        "音频分析组件、节点网络与粒子控制流程",
+        "音频通道与参数变化曲线",
+        "音频驱动的粒子渲染输出"
       ],
-      "coverAlt": "Sound of April 的黑白声音可视化概念与粒子画面"
+      "coverAlt": "TouchDesigner 中不同声音样本的彩色声谱分析图"
     },
     "en": {
-      "title": "Sound of April",
-      "category": "TouchDesigner · AUDIO VISUALIZATION",
-      "summary": "Making individual and collective voices visible through audio-driven particles.",
-      "description": "Beginning with voices and individual expression during Shanghai’s 2022 lockdown, the project explores how sound can be seen in another form. TouchDesigner analyzes the audio and maps frequency ranges to particle motion and speed.",
+      "title": "Audio-reactive Particles",
+      "category": "TouchDesigner · AUDIO ANALYSIS & PARTICLE RENDERING",
+      "summary": "Mapping audio frequency bands to particle motion and speed.",
+      "description": "TouchDesigner analyzes sound input and separates low, mid and high frequencies. Audio parameters drive particle motion and speed, documented through spectrum analysis, node networks, parameter traces and rendered outputs.",
       "facts": [
-        [
-          "Period",
-          "May–June 2022"
-        ],
         [
           "Tool",
           "TouchDesigner"
         ],
         [
-          "Format",
-          "Audio analysis · Particle experiments"
+          "Input",
+          "Audio samples and frequency-band parameters"
+        ],
+        [
+          "Output",
+          "Audio-reactive particle visuals"
         ]
       ],
       "sections": [
         [
-          "Sampling sound",
-          "Bird calls, computer sounds, glass collisions and coughing are used as material for sound experiments, with spectrograms revealing their different structures."
+          "Audio analysis",
+          "Bird calls, computer sounds, glass collisions and coughing provide samples for comparing spectral structures and frequency-band changes."
         ],
         [
-          "From frequencies to motion",
-          "Audio analysis separates low, mid and high frequencies. High frequencies drive particle motion, while low frequencies control speed, responding to the different qualities of individual and collective voices."
+          "Parameter mapping",
+          "High frequencies control particle motion, while low frequencies control particle speed, linking continuous audio parameters with visual behavior."
         ],
         [
-          "Process and output",
-          "Audio studies, TouchDesigner node networks and multiple visual outputs document how parameter mapping turns sound into moving forms."
+          "Nodes and rendering",
+          "Audio analysis, parameter control and particle rendering form a node-based workflow, documented with channel traces, node screenshots and particle outputs."
         ]
       ],
       "captions": [
-        "Sound samples and spectrogram experiments",
-        "TouchDesigner node networks, frequency analysis and particle outputs"
+        "Audio-analysis components, node networks and particle-control workflow",
+        "Audio channels and parameter traces",
+        "Audio-driven particle rendering outputs"
       ],
-      "coverAlt": "Black-and-white concept and particle imagery from Sound of April"
+      "coverAlt": "Color spectrum studies of different sound samples in TouchDesigner"
     }
   },
   {

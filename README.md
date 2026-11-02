@@ -58,7 +58,7 @@ sample/
 
 页面结构与 CSS 位于 `sample/index.html`，中英文文案与切换逻辑位于 `sample/js/language.js`。照片使用网站内的相对路径，不依赖桌面上的原始文件。
 
-联系方式使用用户已提供的 GitHub 账号 Nikihu-a。首批作品选取 Pagepeek、Sound of April、Memories in the Ashes、Lost Crab and Little Flower、Dream Printer、LINK；机器人项目保留团队贡献说明，不添加未经证实的成效数字。
+联系方式使用用户已提供的 GitHub 账号 Nikihu-a。首批作品选取 Pagepeek、音频响应粒子实验、Memories in the Ashes、Lost Crab and Little Flower、Dream Printer、LINK；机器人项目保留团队贡献说明，不添加未经证实的成效数字。
 
 ## 验证状态
 
@@ -94,9 +94,10 @@ python3 tools/optimize-portfolio-assets.py /path/to/source /tmp/portfolio-render
 
 ## TouchDesigner 作品
 
-- `#/sound-of-april`：声音采样、频段分析、节点网络与粒子视觉输出；素材来自 `4(ual page5).pdf`。
+- `#/audio-particles`：声音采样、频段分析、节点网络与粒子视觉输出；素材来自 `4(ual page5).pdf`。
 - `#/ashes`：补充粒子成品、节点过程与交互方案，保留原有手动播放的装置演示视频。
-- Sound of April 的 PDF 内含历史 YouTube 链接，本次验证未取得可用视频，因此网站使用本地作品图，不嵌入该链接。
 
 
 Pagepeek 官网：https://pagepeek.ai/ 。首页介绍、关于与经历区的公司名称，以及 Pagepeek 作品详情的官网入口均可点击访问。
+
+作品呈现约束：音频粒子案例只展示技术内容，使用新的技术名称与链接；原稿中的名称、背景文字和含名称的整页图片不用于网站展示。配图仅提取原 PDF 的音频分析、节点、波形和粒子输出区域。

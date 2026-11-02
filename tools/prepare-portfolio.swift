@@ -12,8 +12,7 @@ let pages: [(String, Int, String)] = [
     ("6.14/Q ROBOT.pdf", 0, "robot-cover"), ("6.14/Q ROBOT.pdf", 16, "robot-prototype"), ("6.14/Q ROBOT.pdf", 18, "robot-interaction"),
     ("Memories in the ashes.pdf", 14, "ashes-cover"),
     ("Memories in the ashes.pdf", 18, "ashes-particles"),
-    ("Memories in the ashes.pdf", 13, "ashes-setup"), ("Memories in the ashes.pdf", 15, "ashes-nodes"),
-    ("4(ual page5).pdf", 0, "april-cover"), ("4(ual page5).pdf", 3, "april-sound-analysis"), ("4(ual page5).pdf", 4, "april-touchdesigner")
+    ("Memories in the ashes.pdf", 13, "ashes-setup"), ("Memories in the ashes.pdf", 15, "ashes-nodes")
 ]
 for (file,index,name) in pages {
     guard let doc=PDFDocument(url:source.appendingPathComponent(file)),let page=doc.page(at:index) else {fatalError(file)}
@@ -21,6 +20,21 @@ for (file,index,name) in pages {
     guard let tiff=image.tiffRepresentation,let bitmap=NSBitmapImageRep(data:tiff),let data=bitmap.representation(using:.png,properties:[:]) else {fatalError(name)}
     try data.write(to:output.appendingPathComponent(name+".png"))
     print("Rendered "+name)
+}
+// Extract technical figures only, using normalized top-left coordinates.
+guard let audioDocument=PDFDocument(url:source.appendingPathComponent("4(ual page5).pdf")) else { fatalError("Cannot read audio source") }
+let audioFigures:[(Int,String,Double,Double,Double,Double)]=[
+    (3,"audio-spectrum",0.545,0.235,0.435,0.71),
+    (4,"audio-nodes",0.020,0.105,0.545,0.56),
+    (4,"audio-waveforms",0.020,0.680,0.149,0.268),
+    (4,"audio-particles",0.592,0.105,0.390,0.180)
+]
+for (index,name,x,y,width,height) in audioFigures {
+    guard let page=audioDocument.page(at:index)?.copy() as? PDFPage else { fatalError(name) }
+    let b=page.bounds(for:.mediaBox)
+    page.setBounds(CGRect(x:b.minX+b.width*x,y:b.minY+b.height*(1-y-height),width:b.width*width,height:b.height*height),for:.cropBox)
+    let image=page.thumbnail(of:NSSize(width:1800,height:1400),for:.cropBox)
+    if let t=image.tiffRepresentation,let bitmap=NSBitmapImageRep(data:t),let png=bitmap.representation(using:.png,properties:[:]) { try png.write(to:output.appendingPathComponent(name+".png")) }
 }
 let asset=AVURLAsset(url:source.appendingPathComponent("video.MOV"))
 if let export=AVAssetExportSession(asset:asset,presetName:AVAssetExportPreset960x540) {
